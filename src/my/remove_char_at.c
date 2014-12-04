@@ -22,10 +22,8 @@ void remove_char_at(char **s, unsigned int i)
 	x++;
       (*s)[y] = tmp[x];
     }
-    
-    if (y == n - 1) {
-      (*s)[--y] = '\0';
-    }
+    (*s)[y] = '\0';
+ 
     free(tmp);
   }
 }
