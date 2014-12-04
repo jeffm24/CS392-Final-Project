@@ -85,4 +85,13 @@ void *xmalloc(unsigned int);
 //Takes a string and parses it for an int (taking signs into account) and returns it.
 int my_atoi(char*);
 
+//removes the char at the given index of the string.
+void remove_char_at(char**, unsigned int);
+
+//adds the given char at the given index of the string.
+void add_char_at(char**, char, unsigned int);
+
+//gets the substring from the given start index to the given end index.
+char *get_substring(char*, unsigned int, unsigned int);
+
 #endif

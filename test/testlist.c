@@ -15,6 +15,7 @@ int main()
     t_node *head, *head2;
     int i;
     int *rem;
+    char *str = xmalloc(256);
  
     //---------------------------------------------------------------------
     my_str("TESTING ADD_NODE, NEW_NODE, AND TRAVERSE_INT:\n\n");
@@ -161,5 +162,27 @@ int main()
     traverse_string(head);
     my_str("\nSHOULD BE: test is this\n\n");
  
+    //---------------------------------------------------------------------
+    my_str("TESTING BUFFER EDITING STUFF:\n\n");
+    
+    i = read(0, str, 256);
+    my_str("Adding char '9' to \"");
+    my_str(str);
+    my_str("\" at 2.\n\n");
+    add_char_at(&str, '9', 2);
+    my_str(str);    
+    
+    my_str("\nAdding char 'a' at 100.\n\n");
+    add_char_at(&str, 'a', 100);
+    my_str(str);
+
+    my_str("\nRemoving char at 5.\n\n");
+    remove_char_at(&str, 5);
+    my_str(str);
+
+    my_str("\nRemoving char at 100.\n\n");
+    remove_char_at(&str, 100);
+    my_str(str);
+
     return 0;
 }
