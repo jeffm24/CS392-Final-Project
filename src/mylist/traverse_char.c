@@ -6,8 +6,8 @@
  */
 void traverse_char(t_node *h)
 {
-	for (; h != NULL ; h = h->next) {
-		my_char(*(char *)h->elem);
-		my_char(' ');
-	}
+  for (; h != NULL ; h = h->next) {
+    my_char(*(char *)h->elem);
+    my_char(' ');
+  }
 }

@@ -7,21 +7,27 @@
  */
 void add_node_at(t_node *n, t_node **h, unsigned int i)
 {
-	t_node *it;
+  t_node *it;
 
-	if (n != NULL) {
-		if (h != NULL && *h != NULL) {
-			if (i != 0) {
-				it = *h;
-				for (; i > 1 && it->next != NULL ; i--, it = it->next)
-					;
-				n->next = it->next;
-				it->next = n;
-			} else {
-				n->next = *h;
-				*h = n;
-			}
-		} else
-			*h = n;
+  if (n != NULL) {
+    if (h != NULL && *h != NULL) {
+      if (i != 0) {
+	it = *h;
+	for (; i > 1 && it->next != NULL ; i--, it = it->next)
+	  ;
+	if (it->next != NULL) {
+	  n->next = it->next;
+	  (it->next)->prev = n;
+	  it->next = n;
+	  n->prev = it;
+	} else {
+	  it->next = n;
+	  n->prev = it;
 	}
+      } else {
+	add_node(n, h);
+      }
+    } else
+      *h = n;
+  }
 }

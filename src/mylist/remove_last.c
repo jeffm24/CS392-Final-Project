@@ -6,23 +6,22 @@
  */
 void *remove_last(t_node **h)
 {
-	t_node *it, *rem;
-	void *e;
-	
-	if (h != NULL && *h != NULL) {
-		if ((*h)->next != NULL) {
-			it = *h;
-			for(; it->next->next != NULL ; it = it->next)
-				;
-			rem = it->next;
-			e = rem->elem;
-			it->next = NULL;
-			free(rem);
-		} else {
-			e = (*h)->elem;
-			free(*h);
-		}
-		return e;
-	} else 
-		return NULL;
+  t_node *it;
+  void *e;
+  
+  if (h != NULL && *h != NULL) {
+    if ((*h)->next != NULL) {
+      it = *h;
+      for(; it->next != NULL ; it = it->next)
+	;
+      e = it->elem;
+      (it->prev)->next = NULL;
+      free(it);
+    } else {
+      e = (*h)->elem;
+      free(*h);
+    }
+    return e;
+  } else 
+    return NULL;
 }

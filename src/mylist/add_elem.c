@@ -6,6 +6,5 @@
  */
 void add_elem(void *e, t_node **h)
 {
-	if (e != NULL)
-		add_node(new_node(e, NULL), h);
+  add_node(new_node(e), h);
 }

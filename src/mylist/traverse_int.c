@@ -6,8 +6,8 @@
  */
 void traverse_int(t_node *h)
 {
-	for (; h != NULL ; h = h->next) {
-		my_int(*(int *)h->elem);
-		my_char(' ');
-	}
+  for (; h != NULL ; h = h->next) {
+    my_int(*(int *)h->elem);
+    my_char(' ');
+  }
 }

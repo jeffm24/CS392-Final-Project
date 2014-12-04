@@ -6,15 +6,17 @@
  */
 void *remove_node(t_node **h)
 {
-	t_node *rem;
-	void *e;
+  t_node *rem;
+  void *e;
   
-	if (h != NULL && *h != NULL) {
-		e = (*h)->elem;
-		rem = *h;
-		*h = (*h)->next;
-		free(rem);
-		return e;
-	}else
-		return NULL;
+  if (h != NULL && *h != NULL) {
+    e = (*h)->elem;
+    rem = *h;
+    *h = (*h)->next;
+    if (*h != NULL)
+      (*h)->prev = NULL;
+    free(rem);
+    return e;
+  }else
+    return NULL;
 } 

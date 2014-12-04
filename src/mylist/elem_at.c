@@ -6,10 +6,10 @@
  */
 void *elem_at(t_node *h, unsigned int i)
 {
-	if (h != NULL) {
-		for(; i > 0 && h->next != NULL ; i--, h = h->next)
-			;
-		return h->elem;
-	} else
-		return NULL;
+  t_node *n;
+
+  if ((n = node_at(h, i)) != NULL)
+    return n->elem;
+  else
+    return NULL;
 }

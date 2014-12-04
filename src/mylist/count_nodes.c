@@ -6,11 +6,11 @@
  */
 unsigned int count_nodes(t_node *h)
 {
-	unsigned int i;
-
-	if(h != NULL){
-		for(i = 0 ; h != NULL ; i++, h = h->next)
-			;
-	}
-	return i;
+  unsigned int i;
+  
+  if(h != NULL){
+    for(i = 0 ; h != NULL ; i++, h = h->next)
+      ;
+  }
+  return i;
 }

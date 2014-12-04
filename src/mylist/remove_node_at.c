@@ -6,21 +6,24 @@
  */
 void *remove_node_at(t_node **h, unsigned int i)
 {
-	t_node *it, *prev, *rem;
-	void *e;
+  t_node *it;
+  void *e;
   
-	if (h != NULL && *h != NULL) {
-		if (i != 0) {
-			for (prev = *h, it = prev->next ; i > 1 && it->next != NULL; i--, prev = prev->next, it = it->next)
-				;
-			e = it->elem;
-			rem = it;
-			it = it->next;
-			prev->next = it;			
-			free(rem);
-			return e;
-		} else
-			remove_node(h);
-	} else
-		return NULL;
+  if (h != NULL && *h != NULL) {
+    if (i != 0) {
+      for (it = *h ; i > 0 && it->next != NULL; i--, it = it->next)
+	;
+      e = it->elem;
+      if (it->next != NULL) {
+	(it->prev)->next = it->next;
+	(it->next)->prev = it->prev;	
+      } else {
+	(it->prev)->next = NULL;
+      }
+      free(it);
+      return e;
+    } else
+      remove_node(h);
+  } else
+    return NULL;
 }

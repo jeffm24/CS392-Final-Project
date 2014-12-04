@@ -6,10 +6,10 @@
  */
 t_node *node_at(t_node *h, unsigned int i)
 {
-	if (h != NULL) {
-		for(; i > 0 && h->next != NULL ; i--, h = h->next)
-			;
-		return h;
-	} else
-		return NULL;
+  if (h != NULL) {
+    for(; i > 0 && h->next != NULL ; i--, h = h->next)
+      ;
+    return h;
+  } else
+    return NULL;
 }

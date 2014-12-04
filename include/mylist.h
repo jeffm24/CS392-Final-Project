@@ -13,10 +13,11 @@ typedef struct s_node
 {
   void *elem;
   struct s_node *next;
+  struct s_node *prev;
 }t_node;
 
 //Allocate a new t_node and return it
-t_node *new_node(void*, t_node*);
+t_node *new_node(void*);
 
 //Adds the given node to the head of the list
 void add_node(t_node*, t_node**);
