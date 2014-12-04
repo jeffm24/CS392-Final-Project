@@ -16,6 +16,7 @@ int main()
     int i;
     int *rem;
     char *str = xmalloc(256);
+    char *str2;
  
     //---------------------------------------------------------------------
     my_str("TESTING ADD_NODE, NEW_NODE, AND TRAVERSE_INT:\n\n");
@@ -183,6 +184,19 @@ int main()
     my_str("\nRemoving char at 100.\n\n");
     remove_char_at(&str, 100);
     my_str(str);
+
+    my_str("\n\nGetting substring from index 1-6.\n\n");
+    str2 = get_substring(str, 1, 6);
+    my_str(str2);
+
+    free(str2);
+
+    my_str("\nGetting substring from index 2-100.\n\n");
+    str2 = get_substring(str, 2, 100);
+    my_str(str2);
+
+    free(str2);
+    free(str);
 
     return 0;
 }

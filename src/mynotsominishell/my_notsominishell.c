@@ -1,7 +1,6 @@
 #include "mynotsominishell.h"
 
 /*
- * Author: Jeff Mariconda
  * Class: CS392
  * 
  * A basic shell for running termnial commands.

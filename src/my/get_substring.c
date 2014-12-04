@@ -9,11 +9,12 @@
 char *get_substring(char *str, unsigned int s, unsigned int f)
 {
   char *sub;
-  unsigned int i;
+  unsigned int i, n;
 
   if (str != NULL) {
     sub = xmalloc(f - s);
-    for (i = 0 ; s < f + 1 ; i++, s++)
+    n = my_strlen(str);
+    for (i = 0 ; s < f + 1 && s < n ; i++, s++)
       sub[i] = str[s];
   }
   return sub;
