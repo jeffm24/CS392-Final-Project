@@ -26,8 +26,7 @@
 #define RIGHT "kr"
 #define CLEAR "cl"
 #define MOVE "cm"
-#define VECAP "\E[?25h" // actual string for VE in case tgetstr doesn't find it
-#define VICAP "\E[?25l" // same as above but for VI
+#define 
 
 typedef struct	s_env
 {
@@ -35,15 +34,14 @@ typedef struct	s_env
   char		*right;
   char		*up;
   char		*down;
-  char		*esc;
   char		*move;
   char		*clear;
   struct winsize win;
   struct termio	line_backup;
   int		flag;
   int		stdio_backup;
-  int		nbelems;
   int		pos;
+  int           size;
   t_node        currNode;
   char          *buff;
 }		t_env;
@@ -55,11 +53,10 @@ void restore_terminal();
 char *term_get_cap(char*);
 void init_caps();
 int my_termprint(int);
-void term_clear();
 void check(char*);
 void refresh_buff();
-void echo(char*);
-void exit();
+void getout();
+void archive_buff();
 
 /* Commands: */
 void cut_eol();     //ctrl-k
