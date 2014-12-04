@@ -1,15 +1,16 @@
 #include "mynotsominishell.h"
 /*
+ * Class: CS-392
  *
- *
- *
- *
+ * Pre: Takes a char* for the reading buffer
+ * Post: Compares the read buffer to all of the special characters and acts accordingly.
  */
 void check(char *in)
 {
   char **v;
 
   if (in != NULL) {
+
     if (my_strcmp(in, KR) == 0 && gl_env.flag != 1) {
       //right
       right();
@@ -50,6 +51,7 @@ void check(char *in)
       //escape
       getout();
     } else if (my_strcmp(in, "\n") == 0) {
+      //enter
       v = my_str2vect((char*)gl_env.currNode->elem);
 
       archive_buff();
@@ -78,7 +80,12 @@ void check(char *in)
 	}
 	
       }
+    } else {
+      //any other character
+      add_char_at(&((char*)gl_env.currNode->elem), *in, gl_env.size);
+      gl_env.size++;
+      refresh_buff();
     }
-      
+    
   }
 }
