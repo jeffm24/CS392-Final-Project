@@ -1,5 +1,8 @@
 #include "../../include/mynotsominishell.h"
 
 void curight() {
-	tputs(gl_env.curight, 1, my_termprint);
+	if (gl_env.pos < gl_env.size) {
+		tputs(gl_env.curight, 1, my_termprint);
+		gl_env.pos++;
+	}
 }

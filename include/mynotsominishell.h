@@ -26,8 +26,8 @@
 #define RIGHT "kr"
 #define CLEAR "cl"
 #define MOVE "cm" 
-#define CULEFT "\E[D"
-#define CURIGHT "\E[C"
+#define CULEFT "le"
+#define CURIGHT "nd"
 
 typedef struct	s_env
 {
