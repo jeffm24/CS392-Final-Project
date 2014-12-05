@@ -6,7 +6,7 @@
  */
 void backspace()
 {
-  if (gl_env.size > 1 && gl_env.pos > 0) {
+  if (gl_env.size > 0 && gl_env.pos > 0) {
     remove_substring((char**)&gl_env.currNode->elem, gl_env.pos - 1, gl_env.pos - 1);
     gl_env.size--;
     culeft();

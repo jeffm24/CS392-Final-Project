@@ -1,4 +1,9 @@
 #include "mynotsominishell.h"
+/*
+ * Class: CS-392
+ *
+ * Gets the terminal capability that corresponds to input string
+ */
 
 char* term_get_cap(char* cap)
 {

@@ -1,4 +1,10 @@
 #include "mynotsominishell.h"
+/*
+ * Class: CS-392
+ *
+ * Initializes terminal capabilities.
+ */
+
 
 void init_caps() {
   char *term;

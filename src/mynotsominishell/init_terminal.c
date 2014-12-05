@@ -1,4 +1,9 @@
 #include "mynotsominishell.h"
+/*
+ * Class: CS-392
+ *
+ * Initializes terminal.
+ */
 
 void init_terminal()
 {

@@ -12,7 +12,7 @@ void check(char *in)
   int pid;
 
   if (in != NULL && gl_env.flag != 1) {
-    in[1] = '\0';
+
     if (my_strcmp(in, KR) == 0 && gl_env.flag != 1) {
       //right
       curight();
