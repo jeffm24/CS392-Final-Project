@@ -7,5 +7,6 @@
 void getout()
 {
   restore_terminal();
+  my_char('\n');
   exit(0);
 }

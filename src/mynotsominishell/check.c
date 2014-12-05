@@ -18,13 +18,13 @@ void check(char *in)
     } else if (my_strcmp(in, KL) == 0 && gl_env.flag != 1) {
       //left
       culeft();
-    }/* else if (my_strcmp(in, KU) == 0 && gl_env.flag != 1) {
+    } else if (my_strcmp(in, KU) == 0 && gl_env.flag != 1) {
       //up
       up();
     } else if (my_strcmp(in, KD) == 0 && gl_env.flag != 1) {
       //down
       down();
-    } else if (*in == 1 && gl_env.flag != 1) {
+    }/* else if (*in == 1 && gl_env.flag != 1) {
       //ctrl-a
       move_start();
     } else if (*in == 4 && gl_env.flag != 1) {
@@ -86,7 +86,6 @@ void check(char *in)
       //any other character
       add_char_at((char**)&gl_env.currNode->elem, *in, gl_env.pos);
       gl_env.size++;
-      gl_env.pos++;
       curight();
       refresh_buff();
     }

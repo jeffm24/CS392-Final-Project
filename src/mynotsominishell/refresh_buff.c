@@ -7,9 +7,13 @@
 void refresh_buff()
 {
   int i;
+  int currPos;
 
-  for (i = 0 ; i < gl_env.pos ; i++) {
+  currPos = gl_env.pos;
+  for (i = 0 ; i < currPos ; i++) {
     culeft();
   }
   my_str((char*)gl_env.currNode->elem);
+
+  gl_env.pos = currPos;
 }
