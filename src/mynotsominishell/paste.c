@@ -14,7 +14,7 @@ void paste()
     
     insert_str_at((char**)&gl_env.currNode->elem, gl_env.clipboard, gl_env.pos);
   
-    gl_env.size += n - 2;
+    gl_env.size += n;
     for (i = 0 ; i < n ; i++)
       curight();
 
