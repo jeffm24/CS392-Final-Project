@@ -6,6 +6,10 @@
  */
 void refresh_buff()
 {
-  move_cursor_to(0, 0);
+  int i;
+
+  for (i = 0 ; i < gl_env.pos ; i++) {
+    culeft();
+  }
   my_str((char*)gl_env.currNode->elem);
 }

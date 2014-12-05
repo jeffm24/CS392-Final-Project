@@ -37,8 +37,8 @@ typedef struct	s_env
   char		*down;
   char		*move;
   char		*clear;
-  char    *culeft;
-  char    *curight;
+  char          *culeft;
+  char          *curight;
   struct winsize win;
   struct termio	line_backup;
   int		flag;
@@ -69,8 +69,6 @@ void move_cursor_to(int, int);
 //void backspace();   
 //void move_start();  //ctrl-a
 //void move_end();    //ctrl-e
-//void left();
-//void right();
 //void up();
 //void down();
 void clear();       //ctrl-L
