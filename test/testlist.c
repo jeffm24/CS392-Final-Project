@@ -198,7 +198,13 @@ int main()
     my_str(str2);
 
     free(str2);
+    
+    my_str("\nAdding string ADDITION to 1.\n\n");
+    insert_str_at(&str, "ADDITION", 1);
+    my_str(str);
+    my_str("\n");
+
     free(str);
-  
+    
     return 0;
 }

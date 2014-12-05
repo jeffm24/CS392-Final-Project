@@ -18,12 +18,10 @@ int main()
   gl_env.flag = 0;
 
   gl_env.currNode = new_node("");
-  gl_env.currNode->elem = xmalloc(1);
-  ((char*)gl_env.currNode->elem)[0] = '\0';
+  gl_env.currNode->elem = xmalloc(256);
+  memset(gl_env.currNode->elem, '\0', sizeof(gl_env.currNode->elem)); 
   gl_env.size = my_strlen((char*)gl_env.currNode->elem);
   gl_env.pos = 0;  
-
-  signal(SIGWINCH, refresh_buff);
 
   my_str("\n--------------Welcome to the Not-So-Minishell--------------\n\n");
   my_str(getcwd(cwd, sizeof(cwd)));

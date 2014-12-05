@@ -84,7 +84,7 @@ void check(char *in)
       my_str("> ");
     } else {
       //any other character
-      add_char_at((char**)&gl_env.currNode->elem, *in, gl_env.pos);
+      insert_str_at((char**)&gl_env.currNode->elem, &in[0], gl_env.pos);
       gl_env.size++;
       curight();
       refresh_buff();

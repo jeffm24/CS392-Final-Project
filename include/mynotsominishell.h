@@ -12,6 +12,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <termcap.h>
+#include <string.h>
 
 #define READTIME 1
 #define READMIN 3
