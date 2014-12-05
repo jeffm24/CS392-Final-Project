@@ -69,10 +69,12 @@ void delete();      //ctrl-d
 void backspace();   
 void move_start();  //ctrl-a
 void move_end();    //ctrl-e
-void culeft();
-void curight();
+void left();
+void right();
 void up();
 void down();
 void clear();       //ctrl-L
+void culeft();
+void curight();
 
 #endif
