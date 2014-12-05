@@ -15,7 +15,7 @@ int main()
     t_node *head, *head2;
     int i;
     int *rem;
-    char *str = xmalloc(256);
+    char *str;
     char *str2;
  
     //---------------------------------------------------------------------
@@ -166,23 +166,25 @@ int main()
     //---------------------------------------------------------------------
     my_str("TESTING BUFFER EDITING STUFF:\n\n");
     
+    str = xmalloc(256);
     i = read(0, str, 256);
-    my_str("Adding char '9' to \"");
+    
+    my_str("Adding string HELLO to \"");
     my_str(str);
     my_str("\" at 2.\n\n");
-    add_char_at(&str, '9', 2);
+    insert_str_at(&str, "HELLO", 2);
     my_str(str);    
-    
-    my_str("\nAdding char 'a' at 100.\n\n");
-    add_char_at(&str, 'a', 100);
+ 
+    my_str("\nAdding string END at 100.\n\n");
+    insert_str_at(&str, "END", 100);
     my_str(str);
 
-    my_str("\nRemoving char at 5.\n\n");
-    remove_char_at(&str, 5);
+    my_str("\nRemoving substring from 2 to 6\n\n");
+    remove_substring(&str, 2, 6);
     my_str(str);
 
-    my_str("\nRemoving char at 100.\n\n");
-    remove_char_at(&str, 100);
+    my_str("\nRemoving substring from 6 to 100.\n\n");
+    remove_substring(&str, 6, 100);
     my_str(str);
 
     my_str("\n\nGetting substring from index 1-6.\n\n");
@@ -197,6 +199,6 @@ int main()
 
     free(str2);
     free(str);
-
+  
     return 0;
 }
