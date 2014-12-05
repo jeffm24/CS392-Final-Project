@@ -8,6 +8,7 @@
 void check(char *in)
 {
   char **v;
+  int pid;
 
   if (in != NULL) {
 
@@ -82,8 +83,9 @@ void check(char *in)
       }
     } else {
       //any other character
-      add_char_at(&((char*)gl_env.currNode->elem), *in, gl_env.size);
+      add_char_at(&((char*)gl_env.currNode->elem), *in, gl_env.pos);
       gl_env.size++;
+      gl_env.pos++;
       refresh_buff();
     }
     

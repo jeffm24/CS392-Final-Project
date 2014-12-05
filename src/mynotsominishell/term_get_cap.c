@@ -1,4 +1,4 @@
-#include "../../include/mynotsominishell.h"
+#include "mynotsominishell.h"
 
 char* term_get_cap(char* cap)
 {

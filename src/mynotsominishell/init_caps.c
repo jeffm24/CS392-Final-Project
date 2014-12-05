@@ -1,4 +1,4 @@
-#include "../../include/mynotsominishell.h"
+#include "mynotsominishell.h"
 
 void init_caps() {
   char* term;

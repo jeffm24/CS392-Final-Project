@@ -25,8 +25,7 @@
 #define LEFT "kl"
 #define RIGHT "kr"
 #define CLEAR "cl"
-#define MOVE "cm"
-#define 
+#define MOVE "cm" 
 
 typedef struct	s_env
 {
@@ -42,8 +41,7 @@ typedef struct	s_env
   int		stdio_backup;
   int		pos;
   int           size;
-  t_node        currNode;
-  char          *buff;
+  t_node        *currNode;
 }		t_env;
 
 t_env	gl_env;
