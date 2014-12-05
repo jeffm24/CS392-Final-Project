@@ -19,4 +19,6 @@ void init_caps() {
   gl_env.right = term_get_cap(RIGHT);
   gl_env.down = term_get_cap(DOWN);
   gl_env.up = term_get_cap(UP);
+  gl_env.culeft = term_get_cap(CULEFT);
+  gl_env.curight = term_get_cap(CURIGHT);
 }

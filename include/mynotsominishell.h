@@ -26,6 +26,8 @@
 #define RIGHT "kr"
 #define CLEAR "cl"
 #define MOVE "cm" 
+#define CULEFT "le"
+#define CURIGHT "nd"
 
 typedef struct	s_env
 {
@@ -35,6 +37,8 @@ typedef struct	s_env
   char		*down;
   char		*move;
   char		*clear;
+  char    *culeft;
+  char    *curight;
   struct winsize win;
   struct termio	line_backup;
   int		flag;
@@ -64,8 +68,8 @@ void delete();      //ctrl-d
 void backspace();   
 void move_start();  //ctrl-a
 void move_end();    //ctrl-e
-void left();
-void right();
+void culeft();
+void curight();
 void up();
 void down();
 void clear();       //ctrl-L
