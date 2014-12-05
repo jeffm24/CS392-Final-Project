@@ -24,7 +24,7 @@ void check(char *in)
     } else if (my_strcmp(in, KD) == 0 && gl_env.flag != 1) {
       //down
       down();
-    }/* else if (*in == 1 && gl_env.flag != 1) {
+    } else if (*in == 1 && gl_env.flag != 1) {
       //ctrl-a
       move_start();
     } else if (*in == 4 && gl_env.flag != 1) {
@@ -45,10 +45,10 @@ void check(char *in)
     } else if (*in == 25 && gl_env.flag != 1) {
       //ctrl-y
       paste();
-    } else if (*in == '\b' && gl_env.flag != 1) {
+    } else if (*in == 0x7f && gl_env.flag != 1) {
       //backspace
       backspace();
-      } */else if (my_strcmp(in, "\E") == 0) {
+    } else if (my_strcmp(in, "\E") == 0) {
       //escape
       getout();
     } else if (my_strcmp(in, "\n") == 0) {

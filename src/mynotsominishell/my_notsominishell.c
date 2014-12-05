@@ -23,6 +23,8 @@ int main()
   gl_env.size = my_strlen((char*)gl_env.currNode->elem);
   gl_env.pos = 0;  
 
+  signal(SIGWINCH, refresh_buff);
+
   my_str("\n--------------Welcome to the Not-So-Minishell--------------\n\n");
   my_str(getcwd(cwd, sizeof(cwd)));
   my_str("> ");
