@@ -12,7 +12,6 @@ void check(char *in)
   int pid;
 
   if (in != NULL && gl_env.flag != 1) {
-    in[1] = '\0';
     if (my_strcmp(in, KR) == 0 && gl_env.flag != 1) {
       //right
       curight();
@@ -81,15 +80,15 @@ void check(char *in)
 	  my_freevect(v);
 	}
       }
+      my_str("\n");
       my_str(getcwd(cwd, sizeof(cwd)));
       my_str("> ");
     } else {
       //any other character
-      insert_str_at((char**)&gl_env.currNode->elem, &in[0], gl_env.pos);
+      insert_str_at((char**)&gl_env.currNode->elem, in, gl_env.pos);
       gl_env.size = my_strlen((char*)gl_env.currNode->elem);
       curight();
       refresh_buff();
-    }
-    
+    }    
   }
 }

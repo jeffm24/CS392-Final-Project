@@ -27,6 +27,7 @@ int main()
   my_str(getcwd(cwd, sizeof(cwd)));
   my_str("> ");
   while (1) {
+    
     if (read(0, buff, READMIN + 3) < 0) {
       my_str("\nREAD FAILED.\n\n");
       getout();
