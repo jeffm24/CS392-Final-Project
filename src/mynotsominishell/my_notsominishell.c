@@ -18,6 +18,7 @@ int main()
   gl_env.flag = 0;
 
   gl_env.currNode = new_node("");
+  gl_env.currNode->elem = xmalloc(5);
   gl_env.size = my_strlen((char*)gl_env.currNode->elem);
   gl_env.pos = 0;  
 

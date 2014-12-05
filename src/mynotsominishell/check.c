@@ -11,7 +11,7 @@ void check(char *in)
   int pid;
 
   if (in != NULL) {
-
+    /*
     if (my_strcmp(in, KR) == 0 && gl_env.flag != 1) {
       //right
       right();
@@ -36,7 +36,7 @@ void check(char *in)
     } else if (*in == 11 && gl_env.flag != 1) {
       //ctrl-k
       cut_eol();
-    } else if (*in == 12 && gl_env.flag != 1) {
+      } else if (*in == 12 && gl_env.flag != 1) {
       //ctrl-l
       clear();
     } else if (*in == 23 && gl_env.flag != 1) {
@@ -48,7 +48,7 @@ void check(char *in)
     } else if (*in == '\b' && gl_env.flag != 1) {
       //backspace
       backspace();
-    } else if (my_strcmp(in, "\E") == 0) {
+    } else */if (my_strcmp(in, "\E") == 0) {
       //escape
       getout();
     } else if (my_strcmp(in, "\n") == 0) {
@@ -65,7 +65,7 @@ void check(char *in)
 	my_str("---------------------------------------------------------------\n\n");
 	getout();
       } else {
-
+ 
 	if ((pid = fork()) < 0) {
 	  my_str("\nFORK FAILED.\n\n");
 	  getout();
@@ -83,7 +83,7 @@ void check(char *in)
       }
     } else {
       //any other character
-      add_char_at(&((char*)gl_env.currNode->elem), *in, gl_env.pos);
+      add_char_at((char**)&gl_env.currNode->elem, *in, gl_env.pos);
       gl_env.size++;
       gl_env.pos++;
       refresh_buff();

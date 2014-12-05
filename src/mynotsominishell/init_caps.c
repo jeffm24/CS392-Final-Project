@@ -1,7 +1,7 @@
 #include "mynotsominishell.h"
 
 void init_caps() {
-  char* term;
+  char *term;
   char bp[2048];
   term = getenv("TERM");
 
@@ -12,7 +12,7 @@ void init_caps() {
     exit(1);
   }
 
-  tgetent(bp,term);
+  tgetent(bp, term);
   gl_env.clear = term_get_cap(CLEAR);
   gl_env.move = term_get_cap(MOVE);
   gl_env.left = term_get_cap(LEFT);
