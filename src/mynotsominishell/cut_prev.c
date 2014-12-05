@@ -5,21 +5,24 @@
  * Cuts one word previous to the cursor.
  */
 
-void cut_prev() {
-  char *cut;
-  char *buff;
+void cut_prev() 
+{
   char *snippet;
-  int space;
-  buff = gl_env.currNode->elem;
+  int sPos;
+
   snippet = get_substring(buff, 0, gl_env.pos);
+  sPos = my_strrpos(snippet, ' ');
   
-  space = my_strrpos(snippet, ' ');
-  
-  if (space == -1)
+  if (sPos == -1) {
     gl_env.clipboard = snippet;
-  else
+    
+  } else {
     gl_env.clipboard = get_substring(buff, space+1, gl_env.pos);
+  }
+
+  remove_substring((char**)&gl_env.currNode->elem, 
   
-  gl_env.currNode->elem = get_substring(buff, 0, space);
+  
+
   refresh_buff();
 }

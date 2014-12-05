@@ -10,5 +10,5 @@ void clear() {
   tputs(gl_env.clear, 1, my_termprint);
   my_str(getcwd(cwd, sizeof(cwd)));
   my_str("> ");
-  my_str((char*)gl_env.currNode->elem);
+  refresh_buff();
 }

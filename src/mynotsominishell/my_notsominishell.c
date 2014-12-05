@@ -23,6 +23,8 @@ int main()
   gl_env.size = 0;
   gl_env.pos = 0;  
 
+  gl_env.clipboard = NULL;
+
   my_str("\n--------------Welcome to the Not-So-Minishell--------------\n\n");
   my_str(getcwd(cwd, sizeof(cwd)));
   my_str("> ");

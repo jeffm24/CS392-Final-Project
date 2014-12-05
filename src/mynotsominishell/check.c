@@ -62,7 +62,7 @@ void check(char *in)
 	if(chdir(v[1]) != 0)
 	  my_str("\nInvalid path argument.\n\n");
       } else if (my_strcmp(v[0], "exit") == 0) {
-	my_str("\nThanks for using the Not-So-Minishell. Have a nice day.\n");
+	my_str("\n\nThanks for using the Not-So-Minishell. Have a nice day.\n");
 	my_str("---------------------------------------------------------------\n\n");
 	getout();
       } else {
