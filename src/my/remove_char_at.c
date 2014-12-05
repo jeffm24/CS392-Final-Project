@@ -14,7 +14,6 @@ void remove_char_at(char **s, unsigned int i)
   if (s != NULL) {
     tmp = my_strdup(*s);
     n = my_strlen(tmp);
-    free(*s);
     *s = xmalloc(n - 1);
     
     for (x = 0, y = 0 ; x < n && y < n - 1 ; x++, y++) {
@@ -23,7 +22,5 @@ void remove_char_at(char **s, unsigned int i)
       (*s)[y] = tmp[x];
     }
     (*s)[y] = '\0';
- 
-    free(tmp);
   }
 }

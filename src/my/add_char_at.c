@@ -15,7 +15,6 @@ void add_char_at(char **s, char c, unsigned int i)
   if (s != NULL) {
     tmp = my_strdup(*s);
     n = my_strlen(tmp);
-    free(*s);
     *s = xmalloc(n + 1);
     
     for (x = 0, y = 0 ; x < n && y < n + 1 ; x++, y++) {
@@ -24,11 +23,9 @@ void add_char_at(char **s, char c, unsigned int i)
       (*s)[y] = tmp[x];
     }
     
-    if (y < n + 1) {
+    if (y < n + 1)
       (*s)[y++] = c;
-      (*s)[y] = '\0';
-    }
-
-    free(tmp);
+    
+    (*s)[y] = '\0';
   }
 }
