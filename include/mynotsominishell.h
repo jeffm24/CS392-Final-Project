@@ -59,6 +59,7 @@ void check(char*);
 void refresh_buff();
 void getout();
 void archive_buff();
+void move_cursor_to(int, int);
 
 /* Commands: */
 void cut_eol();     //ctrl-k
