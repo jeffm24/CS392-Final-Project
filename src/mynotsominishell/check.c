@@ -49,8 +49,8 @@ void check(char *in)
     } else if (*in == 0x7f && gl_env.flag != 1) {
       //backspace
       backspace();
-    } else if (my_strcmp(in, "\E") == 0) {
-      //escape
+    } else if (my_strcmp(in, "\E") == 0 || my_strcmp(in, "\003") == 0) {
+      //escape or ctrl-c
       getout();
     } else if (my_strcmp(in, "\n") == 0) {
       //enter
