@@ -46,6 +46,7 @@ typedef struct	s_env
   int		pos;
   int           size;
   t_node        *currNode;
+  char		*clipboard;
 }		t_env;
 
 t_env	gl_env;
