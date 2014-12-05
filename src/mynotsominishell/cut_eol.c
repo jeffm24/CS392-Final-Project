@@ -8,7 +8,6 @@ void cut_eol() {
   gl_env.clipboard = get_substring(buff, gl_env.pos, gl_env.size-1);
 
   gl_env.currNode->elem = get_substring(buff, 0, gl_env.pos - 1);
-  free(gl_env.currNode->elem);
   refresh_buff();
 
   //my_str("CUT: ");
