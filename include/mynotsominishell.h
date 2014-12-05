@@ -57,17 +57,17 @@ void getout();
 void archive_buff();
 
 /* Commands: */
-void cut_eol();     //ctrl-k
-void paste();       //ctrl-y
-void cut_prev();    //ctrl-w
-void delete();      //ctrl-d
-void backspace();   
-void move_start();  //ctrl-a
-void move_end();    //ctrl-e
-void left();
-void right();
-void up();
-void down();
+//void cut_eol();     //ctrl-k
+//void paste();       //ctrl-y
+//void cut_prev();    //ctrl-w
+//void delete();      //ctrl-d
+//void backspace();   
+//void move_start();  //ctrl-a
+//void move_end();    //ctrl-e
+//void left();
+//void right();
+//void up();
+//void down();
 void clear();       //ctrl-L
 
 #endif
