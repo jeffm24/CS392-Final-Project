@@ -1,4 +1,9 @@
 #include "../../include/mynotsominishell.h"
+/*
+ * Class: CS-392
+ *
+ * Changes buffer to one more recent in command history
+ */
 
 void down() {
 if (gl_env.currNode->next != NULL) {

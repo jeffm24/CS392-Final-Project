@@ -12,6 +12,10 @@ void check(char *in)
   int pid;
 
   if (in != NULL && gl_env.flag != 1) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> eb282a23f3a180ae601f4bab8ee1577c6e8ca1db
     if (my_strcmp(in, KR) == 0 && gl_env.flag != 1) {
       //right
       curight();

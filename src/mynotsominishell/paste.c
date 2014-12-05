@@ -1,4 +1,9 @@
 #include "../../include/mynotsominishell.h"
+/*
+ * Class: CS-392
+ *
+ * Pastes cut text.
+ */
 
 void paste() {
 	char *paste;

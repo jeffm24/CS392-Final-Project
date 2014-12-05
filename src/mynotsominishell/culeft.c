@@ -1,4 +1,9 @@
 #include "../../include/mynotsominishell.h"
+/*
+ * Class: CS-392
+ *
+ * Moves the cursor one space to the left.
+ */
 
 void culeft()
 {  
