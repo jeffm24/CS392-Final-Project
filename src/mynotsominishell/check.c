@@ -12,10 +12,7 @@ void check(char *in)
   int pid;
 
   if (in != NULL && gl_env.flag != 1) {
-<<<<<<< HEAD
-=======
 
->>>>>>> eb282a23f3a180ae601f4bab8ee1577c6e8ca1db
     if (my_strcmp(in, KR) == 0 && gl_env.flag != 1) {
       //right
       curight();
@@ -89,8 +86,9 @@ void check(char *in)
       my_str("> ");
     } else {
       //any other character
+      in[1] = '\0';
       insert_str_at((char**)&gl_env.currNode->elem, in, gl_env.pos);
-      gl_env.size = my_strlen((char*)gl_env.currNode->elem);
+      gl_env.size++;
       curight();
       refresh_buff();
     }    
