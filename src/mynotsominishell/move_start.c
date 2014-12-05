@@ -6,11 +6,6 @@
  */
 void move_start()
 {
-  int i;
-  int currPos;
-  
-  for (i = 0 ; i < currPos ; i++) {
+  while (gl_env.pos > 0)
     culeft();
-  } 
-  
 }

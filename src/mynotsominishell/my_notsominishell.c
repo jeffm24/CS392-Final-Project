@@ -20,7 +20,7 @@ int main()
   gl_env.currNode = new_node("");
   gl_env.currNode->elem = xmalloc(256);
   memset(gl_env.currNode->elem, '\0', sizeof(gl_env.currNode->elem)); 
-  gl_env.size = my_strlen((char*)gl_env.currNode->elem);
+  gl_env.size = 0;
   gl_env.pos = 0;  
 
   my_str("\n--------------Welcome to the Not-So-Minishell--------------\n\n");

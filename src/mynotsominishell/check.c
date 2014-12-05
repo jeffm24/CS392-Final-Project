@@ -11,7 +11,8 @@ void check(char *in)
   char cwd[1024];
   int pid;
 
-  if (in != NULL) {
+  if (in != NULL && gl_env.flag != 1) {
+    in[1] = '\0';
     if (my_strcmp(in, KR) == 0 && gl_env.flag != 1) {
       //right
       curight();
@@ -85,7 +86,7 @@ void check(char *in)
     } else {
       //any other character
       insert_str_at((char**)&gl_env.currNode->elem, &in[0], gl_env.pos);
-      gl_env.size++;
+      gl_env.size = my_strlen((char*)gl_env.currNode->elem);
       curight();
       refresh_buff();
     }

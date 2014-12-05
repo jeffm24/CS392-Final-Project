@@ -6,14 +6,15 @@
  */
 void refresh_buff()
 {
-  int i;
   int currPos;
   
+  gl_env.flag = 1;
+
   currPos = gl_env.pos;
-  while (gl_env.pos > 0) {
-    culeft();
-  }
+  move_start();
   my_str((char*)gl_env.currNode->elem);
 
   gl_env.pos = currPos;
+
+  gl_env.flag = 0;
 }
