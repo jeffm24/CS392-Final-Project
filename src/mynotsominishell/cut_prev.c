@@ -19,12 +19,12 @@ void cut_prev()
   if (gl_env.pos == 0) {
     gl_env.clipboard = get_substring(buff, 0, prevPos - 1);
     remove_substring((char**)&gl_env.currNode->elem, 0, prevPos - 1);
+    gl_env.size -= (prevPos - gl_env.pos);
   } else {
     gl_env.clipboard = get_substring(buff, gl_env.pos + 1, prevPos - 1);
     remove_substring((char**)&gl_env.currNode->elem, gl_env.pos + 1, prevPos - 1);
+    gl_env.size -= (prevPos - gl_env.pos - 1);
   }  
-
-  gl_env.size -= (prevPos - gl_env.pos - 1);
   
   refresh_buff();
 }
