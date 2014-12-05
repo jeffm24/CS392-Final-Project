@@ -8,9 +8,9 @@ void refresh_buff()
 {
   int i;
   int currPos;
-
+  
   currPos = gl_env.pos;
-  for (i = 0 ; i < currPos ; i++) {
+  while (gl_env.pos > 0) {
     culeft();
   }
   my_str((char*)gl_env.currNode->elem);
