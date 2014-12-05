@@ -16,6 +16,7 @@ char *get_substring(char *str, unsigned int s, unsigned int f)
     n = my_strlen(str);
     for (i = 0 ; s < f + 1 && s < n ; i++, s++)
       sub[i] = str[s];
+    sub[i] = '\0';
   }
   return sub;
 }
