@@ -12,6 +12,7 @@ void refresh_buff()
 
   currPos = gl_env.pos;
   move_start();
+  tputs("\033[K", 1, my_termprint);
   my_str((char*)gl_env.currNode->elem);
 
   gl_env.pos = currPos;
